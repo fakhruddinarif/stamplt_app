@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stamplt_app/features/employee/screens/employee_screen.dart';
+import 'package:stamplt_app/features/classroom/screens/classroom_screen.dart';
 import 'package:stamplt_app/features/user/screens/user_screen.dart';
 
 void main() {
@@ -35,7 +35,7 @@ class _baseScreenState extends State<BaseScreen> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    EmployeeScreen(),
+    ClassroomScreen(),
     Text("Inbox"),
     UserScreen(),
   ];
@@ -68,7 +68,7 @@ class _baseScreenState extends State<BaseScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box_outlined),
             activeIcon: Icon(Icons.account_box),
-            label: 'Employees',
+            label: 'Classrooms',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mail_outline),
@@ -99,6 +99,7 @@ class HomeScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.5,
               color: Theme.of(context).colorScheme.primary,
+              padding: const EdgeInsets.only(bottom: 16),
               child: Padding(
                 padding: const EdgeInsets.only(top: 56, left: 16, right: 16),
                 child: Column(
@@ -106,7 +107,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'PT. Stamplt Indonesia',
+                      'Politeknik Negeri Malang',
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.onPrimary,
                         fontSize: 14,
@@ -118,27 +119,38 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Harry Maguire',
-                              style: TextStyle(
-                                color: Theme.of(context).colorScheme.onPrimary,
-                                fontSize: 32,
-                                fontWeight: FontWeight.bold,
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Muhammad Fakhruddin Arif',
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Backend Developer',
-                              style: TextStyle(
-                                color: Theme.of(context).colorScheme.onPrimary,
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
+                              Text(
+                                'D-IV Teknik Informatika',
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                ),
                               ),
-                            ),
-                          ],
+                              Text(
+                                'Politeknik Negeri Malang',
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         Container(
                           width: 64,

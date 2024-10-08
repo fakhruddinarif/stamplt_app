@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EmployeeScreen extends StatelessWidget {
-  const EmployeeScreen({Key? key}) : super(key: key);
+class ClassroomScreen extends StatelessWidget {
+  const ClassroomScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class EmployeeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          'Employees',
+                          'Classrooms',
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
