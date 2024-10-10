@@ -17,7 +17,6 @@ class UserScreen extends StatelessWidget {
       {'icon': Icons.logout, 'text': 'Logout', 'color': Colors.red},
     ];
 
-
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -68,18 +67,18 @@ class UserScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.onPrimary,
-                      borderRadius: BorderRadius.circular(28),
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/profile.jpg'),
+                  CircleAvatar(
+                    radius: 42,
+                    backgroundColor: Theme.of(context).colorScheme.onPrimary,
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/profile.jpg',
                         fit: BoxFit.cover,
+                        width: 84,
+                        height: 84,
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
               SizedBox(height: 16),

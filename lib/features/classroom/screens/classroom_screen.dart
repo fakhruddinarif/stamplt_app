@@ -17,31 +17,11 @@ class ClassroomScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Classrooms',
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(width: 16),
-                        Text(
-                          '10',
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.search), iconSize: 28),
+                    Text("Classroom", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold))
                   ],
                 ),
+                SizedBox(height: 16),
+
               ],
             ),
           ),
